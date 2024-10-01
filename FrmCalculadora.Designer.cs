@@ -51,6 +51,7 @@
             this.bttnIgual = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conversorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.celciusParaFheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -258,9 +259,18 @@
             // 
             // conversorToolStripMenuItem
             // 
+            this.conversorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.celciusParaFheToolStripMenuItem});
             this.conversorToolStripMenuItem.Name = "conversorToolStripMenuItem";
             this.conversorToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
             this.conversorToolStripMenuItem.Text = "Conversor";
+            // 
+            // celciusParaFheToolStripMenuItem
+            // 
+            this.celciusParaFheToolStripMenuItem.Name = "celciusParaFheToolStripMenuItem";
+            this.celciusParaFheToolStripMenuItem.Size = new System.Drawing.Size(376, 34);
+            this.celciusParaFheToolStripMenuItem.Text = "Converter Celcius para Fahrenheit";
+            this.celciusParaFheToolStripMenuItem.Click += new System.EventHandler(this.celciusParaFheToolStripMenuItem_Click);
             // 
             // FrmCalculadora
             // 
@@ -324,5 +334,6 @@
         private System.Windows.Forms.Button bttnIgual;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem conversorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem celciusParaFheToolStripMenuItem;
     }
 }
