@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Calculadora
 {
-    public partial class FrmCalculadora : Form
+    public partial class FrmConversor : Form
     {
-        public FrmCalculadora()
+        public FrmConversor()
         {
             InitializeComponent();
-        }
-
-        private void celciusParaFheToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmCalculadora = new FrmCalculadora();
         }
     }
 }
