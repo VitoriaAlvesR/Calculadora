@@ -40,7 +40,7 @@
             this.bttnCalcular.Name = "bttnCalcular";
             this.bttnCalcular.Size = new System.Drawing.Size(335, 43);
             this.bttnCalcular.TabIndex = 0;
-            this.bttnCalcular.Text = "Calcular";
+            this.bttnCalcular.Text = "Converter";
             this.bttnCalcular.UseVisualStyleBackColor = true;
             // 
             // bttnLimpar
