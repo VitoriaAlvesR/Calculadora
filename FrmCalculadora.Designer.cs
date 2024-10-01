@@ -49,10 +49,12 @@
             this.bttnVirgula = new System.Windows.Forms.Button();
             this.bttnLimpar = new System.Windows.Forms.Button();
             this.bttnIgual = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.conversorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.celciusParaFheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.mnMenu = new System.Windows.Forms.MenuStrip();
+            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.converterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // bttnNum1
@@ -99,6 +101,7 @@
             this.bttnNum2.TabIndex = 4;
             this.bttnNum2.Text = "2";
             this.bttnNum2.UseVisualStyleBackColor = true;
+            this.bttnNum2.Click += new System.EventHandler(this.bttnNum2_Click);
             // 
             // bttnNum6
             // 
@@ -243,34 +246,46 @@
             this.bttnIgual.Text = "=";
             this.bttnIgual.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // mnMenu
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conversorToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(42, 9);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(304, 33);
-            this.menuStrip1.TabIndex = 21;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arquivoToolStripMenuItem,
+            this.converterToolStripMenuItem});
+            this.mnMenu.Location = new System.Drawing.Point(0, 0);
+            this.mnMenu.Name = "mnMenu";
+            this.mnMenu.Size = new System.Drawing.Size(419, 33);
+            this.mnMenu.TabIndex = 22;
+            this.mnMenu.Text = "menuStrip2";
             // 
-            // conversorToolStripMenuItem
+            // arquivoToolStripMenuItem
             // 
-            this.conversorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.celciusParaFheToolStripMenuItem});
-            this.conversorToolStripMenuItem.Name = "conversorToolStripMenuItem";
-            this.conversorToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
-            this.conversorToolStripMenuItem.Text = "Conversor";
+            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStripMenuItem});
+            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(91, 29);
+            this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
-            // celciusParaFheToolStripMenuItem
+            // converterToolStripMenuItem
             // 
-            this.celciusParaFheToolStripMenuItem.Name = "celciusParaFheToolStripMenuItem";
-            this.celciusParaFheToolStripMenuItem.Size = new System.Drawing.Size(376, 34);
-            this.celciusParaFheToolStripMenuItem.Text = "Converter Celcius para Fahrenheit";
-            this.celciusParaFheToolStripMenuItem.Click += new System.EventHandler(this.celciusParaFheToolStripMenuItem_Click);
+            this.converterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem});
+            this.converterToolStripMenuItem.Name = "converterToolStripMenuItem";
+            this.converterToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
+            this.converterToolStripMenuItem.Text = "Converter";
+            // 
+            // converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem
+            // 
+            this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Name = "converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem";
+            this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Size = new System.Drawing.Size(376, 34);
+            this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Text = "Converter Celcius para Fahrenheit";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sairToolStripMenuItem.Text = "Sair";
             // 
             // FrmCalculadora
             // 
@@ -298,12 +313,12 @@
             this.Controls.Add(this.bttnNum4);
             this.Controls.Add(this.bttnNum5);
             this.Controls.Add(this.bttnNum1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.mnMenu);
             this.Name = "FrmCalculadora";
             this.Text = "FrmCalculadora";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalculadora_FormClosing);
+            this.mnMenu.ResumeLayout(false);
+            this.mnMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,8 +347,10 @@
         private System.Windows.Forms.Button bttnVirgula;
         private System.Windows.Forms.Button bttnLimpar;
         private System.Windows.Forms.Button bttnIgual;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem conversorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem celciusParaFheToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnMenu;
+        private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem converterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem;
     }
 }
