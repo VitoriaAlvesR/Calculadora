@@ -51,9 +51,9 @@
             this.bttnIgual = new System.Windows.Forms.Button();
             this.mnMenu = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.converterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -267,6 +267,12 @@
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(91, 29);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
             // converterToolStripMenuItem
             // 
             this.converterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -280,12 +286,7 @@
             this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Name = "converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem";
             this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Size = new System.Drawing.Size(376, 34);
             this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Text = "Converter Celcius para Fahrenheit";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem.Click += new System.EventHandler(this.converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem_Click);
             // 
             // FrmCalculadora
             // 
@@ -315,8 +316,9 @@
             this.Controls.Add(this.bttnNum1);
             this.Controls.Add(this.mnMenu);
             this.Name = "FrmCalculadora";
-            this.Text = "FrmCalculadora";
+            this.Text = "Calculadora";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalculadora_FormClosing);
+            this.Load += new System.EventHandler(this.FrmCalculadora_Load);
             this.mnMenu.ResumeLayout(false);
             this.mnMenu.PerformLayout();
             this.ResumeLayout(false);
