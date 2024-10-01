@@ -42,6 +42,7 @@
             this.bttnCalcular.TabIndex = 0;
             this.bttnCalcular.Text = "Converter";
             this.bttnCalcular.UseVisualStyleBackColor = true;
+            this.bttnCalcular.Click += new System.EventHandler(this.bttnCalcular_Click);
             // 
             // bttnLimpar
             // 
@@ -51,6 +52,7 @@
             this.bttnLimpar.TabIndex = 1;
             this.bttnLimpar.Text = "Limpar";
             this.bttnLimpar.UseVisualStyleBackColor = true;
+            this.bttnLimpar.Click += new System.EventHandler(this.bttnLimpar_Click);
             // 
             // txtConta
             // 
@@ -59,6 +61,7 @@
             this.txtConta.Name = "txtConta";
             this.txtConta.Size = new System.Drawing.Size(329, 59);
             this.txtConta.TabIndex = 2;
+            this.txtConta.TextChanged += new System.EventHandler(this.txtConta_TextChanged);
             // 
             // txtMostraResultado
             // 
@@ -67,6 +70,7 @@
             this.txtMostraResultado.Name = "txtMostraResultado";
             this.txtMostraResultado.Size = new System.Drawing.Size(329, 61);
             this.txtMostraResultado.TabIndex = 3;
+            this.txtMostraResultado.TextChanged += new System.EventHandler(this.txtMostraResultado_TextChanged);
             // 
             // FrmConversor
             // 
