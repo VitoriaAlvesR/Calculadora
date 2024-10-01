@@ -26,5 +26,11 @@ namespace Calculadora
         {
 
         }
+
+        private void converteCelciusParaConverterCelciusParaFahrenheitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConversor frmConversor = new FrmConversor();
+            frmConversor.ShowDialog();
+        }
     }
 }
