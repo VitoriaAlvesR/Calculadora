@@ -17,9 +17,14 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        private void celciusParaFheToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FrmCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FrmCalculadora = new FrmCalculadora();
+
+        }
+
+        private void bttnNum2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
