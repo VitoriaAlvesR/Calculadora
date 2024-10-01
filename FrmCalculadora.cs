@@ -16,5 +16,15 @@ namespace Calculadora
         {
             InitializeComponent();
         }
+
+        private void FrmCalculadora_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void bttnNum2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
