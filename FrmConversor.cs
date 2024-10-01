@@ -12,9 +12,32 @@ namespace Calculadora
 {
     public partial class FrmConversor : Form
     {
+        double celcius;
         public FrmConversor()
         {
             InitializeComponent();
+        }
+
+        private void txtConta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bttnCalcular_Click(object sender, EventArgs e)
+        {
+            celcius = 1.8 * Convert.ToDouble(txtConta.Text) + 32;
+            txtMostraResultado.Text = Convert.ToString(celcius);
+        }
+
+        private void txtMostraResultado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bttnLimpar_Click(object sender, EventArgs e)
+        {
+            txtConta.Clear();
+            txtMostraResultado.Clear();
         }
     }
 }
